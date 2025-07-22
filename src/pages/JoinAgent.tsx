@@ -82,15 +82,12 @@ const JoinAgent = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 bg-gradient-hero">
+      <section className="pt-24 pb-16 px-4 bg-gradient-hero mt-16">
         <div className="max-w-4xl mx-auto text-center">
-          <Link to="/" className="inline-flex items-center text-muted-foreground hover:text-primary mb-6 transition-colors">
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Home
-          </Link>
+         
           
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Become a <span className="text-transparent bg-gradient-earth bg-clip-text">Climate Resilience Agent</span>
+            Become a <span className="text-transparent bg-primary bg-clip-text">Climate Resilience Agent</span>
           </h1>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -98,7 +95,7 @@ const JoinAgent = () => {
             through climate-smart practices and farmer empowerment.
           </p>
           
-          <Badge variant="secondary" className="px-4 py-2 text-base">
+          <Badge variant="outline" className="px-4 py-2  bg-green-500/10 text-green-700 border-green-200 shadow-sm backdrop-blur-sm animate-float">
             Over 2,000 active agents worldwide
           </Badge>
         </div>
@@ -109,7 +106,7 @@ const JoinAgent = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What is a Klima360 Agent?
+              What is a <span className='text-primary'>Klima360 Agent?</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Our agents are trained community leaders who bridge the gap between climate science 
@@ -117,7 +114,7 @@ const JoinAgent = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>
               <h3 className="text-2xl font-semibold text-foreground mb-6">Your Responsibilities</h3>
               <ul className="space-y-3">
@@ -130,7 +127,7 @@ const JoinAgent = () => {
               </ul>
             </div>
 
-            <div className="grid grid-cols-1 gap-6">
+            <div className="grid grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <Card key={index} className="border-border shadow-soft">
                   <CardContent className="p-6">
