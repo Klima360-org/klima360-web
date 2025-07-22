@@ -77,23 +77,23 @@ const AboutSection = () => {
             <div className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <div className="text-center bg-primary/25 backdrop-blur-md rounded-lg p-3 border border-white/30 shadow-lg mb-10">
+                  <div className="text-center  rounded-lg p-3 border border-input shadow-sm mb-10">
                     <div className="bg-primary-foreground p-6 rounded-md">
                       <div className="text-xl font-bold text-primary mb-1">
                         92%
                       </div>
-                      <div className="text-primary/80 mb-2 text-lg font-semibold">
+                      <div className="text-primary/80 mb-2 text-base">
                         Climate Adaptation Tools Deployed
                       </div>
                       <Progress value={92} className="h-1.5 bg-slate-200" />
                     </div>
                   </div>
-                  <div className="text-center bg-primary/25 backdrop-blur-md rounded-lg p-3 border border-white/30 shadow-lg">
+                  <div className="text-center  rounded-lg p-3 border border-input shadow-sm">
                     <div className="bg-primary-foreground p-6 rounded-md">
                       <div className="text-xl font-bold text-primary mb-1">
                         78%
                       </div>
-                      <div className="text-primary/80 mb-2 text-lg font-semibold">
+                      <div className="text-primary/80 mb-2 text-base">
                         Community Networks Established
                       </div>
                       <Progress value={78} className="h-1.5 bg-slate-200" />
@@ -102,23 +102,23 @@ const AboutSection = () => {
                 </div>
 
                 <div>
-                  <div className="text-center bg-primary/25 backdrop-blur-md rounded-lg p-3 border border-white/30 shadow-lg mb-10">
+                  <div className="text-center  rounded-lg p-3 border border-input shadow-sm mb-10">
                     <div className="bg-primary-foreground p-6 rounded-md">
                       <div className="text-xl font-bold text-primary mb-1">
                         85%
                       </div>
-                      <div className="text-primary/80 mb-2 text-lg font-semibold">
+                      <div className="text-primary/80 mb-2 text-base">
                         Financial Protection Coverage
                       </div>
                       <Progress value={85} className="h-1.5 bg-slate-200" />
                     </div>
                   </div>
-                  <div className="text-center bg-primary/25 backdrop-blur-md rounded-lg p-3 border border-white/30 shadow-lg">
+                  <div className="text-center rounded-lg p-3 border border-input shadow-sm">
                     <div className="bg-primary-foreground p-6 rounded-md">
                       <div className="text-xl font-bold text-primary mb-1">
                         67%
                       </div>
-                      <div className="text-primary/80 mb-2 text-lg font-semibold">
+                      <div className="text-primary/80 mb-2 text-base">
                         Farmer Income Improvement
                       </div>
                       <Progress value={67} className="h-1.5 bg-slate-200" />
