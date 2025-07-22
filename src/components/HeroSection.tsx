@@ -113,7 +113,7 @@ const HeroSection = () => {
                     </div>
                   </div>
                   {/* Resilience Increase - right side, vertically centered */}
-                  <div className="hidden md:blockabsolute right-0 md:-right-24 top-1/2 -translate-y-1/2 z-20">
+                  <div className="hidden md:block absolute right-0 md:-right-24 top-1/2 -translate-y-1/2 z-20">
                     <div className="text-center bg-primary/30 backdrop-blur-md rounded-lg p-3 border border-white/30 shadow-lg">
                       <div className="bg-primary-foreground p-2 rounded-md">
                         <div className="text-lg font-bold text-primary mb-1">85%</div>
