@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Leaf, Mail, MapPin, Phone } from 'lucide-react';
+import logoWhite from '@/assets/logo-white.webp'; // Update with your logo path
 
 const Footer = () => {
   return (
@@ -8,9 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-1">
-            <Link to="/" className="flex items-center space-x-2 font-bold text-xl mb-4">
-              <Leaf className="h-8 w-8 text-sage" />
-              <span>Klima360</span>
+            <Link to="/" className="flex items-center space-x-2 font-bold text-xl">
+              <img src={logoWhite} alt="Klima360 Logo" className="w-40 h-auto object-cover logo" />
             </Link>
             <p className="text-white/80 leading-relaxed">
               Building climate resilience for the world's farmers, one community at a time.
@@ -44,15 +44,15 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-sage" />
+                <Mail className="h-4 w-4 text-green-500" />
                 <span className="text-white/80">info@klima360.org</span>
               </li>
               <li className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-sage" />
+                <Phone className="h-4 w-4 text-green-500" />
                 <span className="text-white/80">+254793702266</span>
               </li>
               <li className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-sage" />
+                <MapPin className="h-4 w-4 text-green-500" />
                 <span className="text-white/80">Global Operations</span>
               </li>
             </ul>
@@ -70,7 +70,7 @@ const Footer = () => {
 
         <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm">
-            © 2024 Klima360. All rights reserved.
+            © 2025 Klima360. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link to="#" className="text-white/60 hover:text-white text-sm transition-colors">
