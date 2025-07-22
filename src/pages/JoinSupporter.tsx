@@ -344,10 +344,10 @@ const JoinSupporter = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button type="submit" className="flex-1" size="lg">
+                  <Button type="submit" className="flex-1 py-2" size="lg">
                     Submit Interest
                   </Button>
-                  <Button variant="outline" className="flex-1" size="lg">
+                  <Button variant="outline" className="flex-1 py-2" size="lg">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Learn More
                   </Button>
