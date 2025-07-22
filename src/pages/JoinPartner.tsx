@@ -1,24 +1,31 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Badge } from '@/components/ui/badge';
-import { Building, Handshake, Target, Globe, ArrowLeft, Calendar } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Badge } from "@/components/ui/badge";
+import {
+  Building,
+  Handshake,
+  Target,
+  Globe,
+  ArrowLeft,
+  Calendar,
+} from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const JoinPartner = () => {
   const [formData, setFormData] = useState({
-    organization: '',
-    contactName: '',
-    email: '',
-    phone: '',
-    organizationType: '',
-    interest: '',
-    goals: ''
+    organization: "",
+    contactName: "",
+    email: "",
+    phone: "",
+    organizationType: "",
+    interest: "",
+    goals: "",
   });
   const { toast } = useToast();
 
@@ -26,27 +33,47 @@ const JoinPartner = () => {
     {
       icon: Building,
       title: "Insurance Companies",
-      description: "Co-develop microinsurance products tailored for smallholder farmers",
-      opportunities: ["Product innovation", "Risk assessment tools", "Claims automation"]
+      description:
+        "Co-develop microinsurance products tailored for smallholder farmers",
+      opportunities: [
+        "Product innovation",
+        "Risk assessment tools",
+        "Claims automation",
+      ],
     },
     {
       icon: Handshake,
       title: "Financial Institutions",
-      description: "Create climate-smart financing solutions for agricultural communities",
-      opportunities: ["Credit scoring", "Digital payments", "Investment products"]
+      description:
+        "Create climate-smart financing solutions for agricultural communities",
+      opportunities: [
+        "Credit scoring",
+        "Digital payments",
+        "Investment products",
+      ],
     },
     {
       icon: Target,
       title: "Agri-SMEs",
-      description: "Scale sustainable agricultural practices and supply chain resilience",
-      opportunities: ["Supply chain mapping", "Quality assurance", "Market access"]
+      description:
+        "Scale sustainable agricultural practices and supply chain resilience",
+      opportunities: [
+        "Supply chain mapping",
+        "Quality assurance",
+        "Market access",
+      ],
     },
     {
       icon: Globe,
       title: "NGOs & Development Organizations",
-      description: "Amplify impact through coordinated community development programs",
-      opportunities: ["Capacity building", "Research collaboration", "Policy advocacy"]
-    }
+      description:
+        "Amplify impact through coordinated community development programs",
+      opportunities: [
+        "Capacity building",
+        "Research collaboration",
+        "Policy advocacy",
+      ],
+    },
   ];
 
   const partnershipBenefits = [
@@ -55,62 +82,72 @@ const JoinPartner = () => {
     "Shared impact measurement and reporting frameworks",
     "Joint funding opportunities and grant applications",
     "Cross-sector knowledge exchange and best practices",
-    "Brand association with proven climate resilience impact"
+    "Brand association with proven climate resilience impact",
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "Partnership Inquiry Submitted!",
-      description: "Thank you for your interest. Our partnerships team will contact you within 3 business days to discuss opportunities.",
+      description:
+        "Thank you for your interest. Our partnerships team will contact you within 3 business days to discuss opportunities.",
     });
     setFormData({
-      organization: '',
-      contactName: '',
-      email: '',
-      phone: '',
-      organizationType: '',
-      interest: '',
-      goals: ''
+      organization: "",
+      contactName: "",
+      email: "",
+      phone: "",
+      organizationType: "",
+      interest: "",
+      goals: "",
     });
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 bg-gradient-hero">
+      <section className="pt-24 pb-16 px-4 bg-gradient-hero mt-16">
         <div className="max-w-4xl mx-auto text-center">
-          <Link to="/" className="inline-flex items-center text-muted-foreground hover:text-primary mb-6 transition-colors">
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Home
-          </Link>
-          
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Partner With <span className="text-transparent bg-gradient-earth bg-clip-text">Klima360</span>
+            Partner With{" "}
+            <span className="text-transparent bg-primary bg-clip-text">
+              Klima360
+            </span>
           </h1>
-          
+
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Join forces with us to scale climate resilience solutions and create lasting impact 
-            for farming communities worldwide.
+            Join forces with us to scale climate resilience solutions and create
+            lasting impact for farming communities worldwide.
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-4">
-            <Badge variant="secondary" className="px-4 py-2">
+            <Badge
+              variant="outline"
+              className="px-4 py-2 bg-green-500/10 text-green-700 border-green-200 shadow-sm backdrop-blur-sm animate-pulse" style={{ animationDelay: "1s" }}
+            >
               50+ Active Partners
             </Badge>
-            <Badge variant="secondary" className="px-4 py-2">
+            <Badge
+              variant="outline"
+              className="px-4 py-2 bg-green-500/10 text-green-700 border-green-200 shadow-sm backdrop-blur-sm animate-pulse" style={{ animationDelay: "2s" }}
+            >
               12 Countries
             </Badge>
-            <Badge variant="secondary" className="px-4 py-2">
+            <Badge
+              variant="outline"
+              className="px-4 py-2 bg-green-500/10 text-green-700 border-green-200 shadow-sm backdrop-blur-sm animate-pulse" style={{ animationDelay: "3s" }}
+            >
               $2M+ Co-invested
             </Badge>
           </div>
@@ -125,13 +162,17 @@ const JoinPartner = () => {
               Partnership Opportunities
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We work with diverse organizations to create comprehensive climate resilience ecosystems.
+              We work with diverse organizations to create comprehensive climate
+              resilience ecosystems.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {partnerTypes.map((partner, index) => (
-              <Card key={index} className="border-border shadow-soft hover:shadow-warm transition-all duration-300">
+              <Card
+                key={index}
+                className="border-border shadow-soft hover:shadow-warm transition-all duration-300"
+              >
                 <CardContent className="p-8">
                   <div className="flex items-center mb-4">
                     <partner.icon className="h-8 w-8 text-primary mr-4" />
@@ -143,10 +184,15 @@ const JoinPartner = () => {
                     {partner.description}
                   </p>
                   <div>
-                    <h4 className="font-medium text-card-foreground mb-3">Key Opportunities:</h4>
+                    <h4 className="font-medium text-card-foreground mb-3">
+                      Key Opportunities:
+                    </h4>
                     <ul className="space-y-2">
                       {partner.opportunities.map((opportunity, idx) => (
-                        <li key={idx} className="text-sm text-muted-foreground flex items-center">
+                        <li
+                          key={idx}
+                          className="text-sm text-muted-foreground flex items-center"
+                        >
                           <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
                           {opportunity}
                         </li>
@@ -168,7 +214,8 @@ const JoinPartner = () => {
               Why Partner With Us?
             </h2>
             <p className="text-xl text-muted-foreground">
-              Our partnerships create mutual value while advancing climate resilience at scale.
+              Our partnerships create mutual value while advancing climate
+              resilience at scale.
             </p>
           </div>
 
@@ -176,7 +223,9 @@ const JoinPartner = () => {
             {partnershipBenefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center mt-0.5">
-                  <span className="text-primary-foreground text-sm font-bold">✓</span>
+                  <span className="text-primary-foreground text-sm font-bold">
+                    ✓
+                  </span>
                 </div>
                 <span className="text-muted-foreground">{benefit}</span>
               </div>
@@ -199,7 +248,9 @@ const JoinPartner = () => {
 
           <Card className="shadow-warm">
             <CardHeader>
-              <CardTitle className="text-center">Partnership Inquiry Form</CardTitle>
+              <CardTitle className="text-center">
+                Partnership Inquiry Form
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
