@@ -74,6 +74,24 @@ const JoinSupporter = () => {
     }
   ];
 
+  const impactSupport = [
+    {
+      current: '60%',
+      title: 'Direct Farmer Support',
+      description: 'Training programs, tools, and technology access for farming communities'
+    },
+    {
+      current: '25%',
+      title: 'Technology Development',
+      description: 'Building and maintaining climate-smart agricultural platforms'
+    },
+    {
+      current: '15%',
+      title: 'Operations & Scale',
+      description: 'Regional expansion, partnerships, and organizational sustainability'
+    }
+  ];
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
@@ -101,15 +119,12 @@ const JoinSupporter = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 bg-gradient-hero">
+      <section className="pt-24 pb-16 px-4 bg-gradient-hero mt-16">
         <div className="max-w-4xl mx-auto text-center">
-          <Link to="/" className="inline-flex items-center text-muted-foreground hover:text-primary mb-6 transition-colors">
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Home
-          </Link>
+          
           
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Support Our <span className="text-transparent bg-gradient-earth bg-clip-text">Climate Mission</span>
+            Support Our <span className="text-transparent bg-primary bg-clip-text">Climate Mission</span>
           </h1>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -118,13 +133,13 @@ const JoinSupporter = () => {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4">
-            <Badge variant="secondary" className="px-4 py-2">
+            <Badge variant="outline" className="px-4 py-2 bg-green-500/10 text-green-700 border-green-200 shadow-sm backdrop-blur-sm animate-pulse"  style={{ animationDelay: "1s" }}>
               $2M+ Mobilized
             </Badge>
-            <Badge variant="secondary" className="px-4 py-2">
+            <Badge variant="outline" className="px-4 py-2 bg-green-500/10 text-green-700 border-green-200 shadow-sm backdrop-blur-sm animate-pulse"  style={{ animationDelay: "2s" }}>
               50K+ Lives Impacted
             </Badge>
-            <Badge variant="secondary" className="px-4 py-2">
+            <Badge variant="outline" className="px-4 py-2 bg-green-500/10 text-green-700 border-green-200 shadow-sm backdrop-blur-sm animate-pulse"  style={{ animationDelay: "3s" }}>
               Global Network
             </Badge>
           </div>
@@ -229,29 +244,15 @@ const JoinSupporter = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">60%</div>
-              <h3 className="font-semibold text-foreground mb-3">Direct Farmer Support</h3>
-              <p className="text-muted-foreground text-sm">
-                Training programs, tools, and technology access for farming communities
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">25%</div>
-              <h3 className="font-semibold text-foreground mb-3">Technology Development</h3>
-              <p className="text-muted-foreground text-sm">
-                Building and maintaining climate-smart agricultural platforms
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">15%</div>
-              <h3 className="font-semibold text-foreground mb-3">Operations & Scale</h3>
-              <p className="text-muted-foreground text-sm">
-                Regional expansion, partnerships, and organizational sustainability
-              </p>
-            </div>
+            {impactSupport.map((item, idx) => (
+              <Card className="text-center" key={item.title}>
+                <CardContent className="p-6">
+                  <div className="text-4xl font-bold text-primary mb-2">{item.current}</div>
+                  <h3 className="font-semibold text-foreground mb-3">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm">{item.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
