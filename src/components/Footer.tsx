@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Leaf, Mail, MapPin, Phone } from 'lucide-react';
-import logoWhite from '@/assets/logo-white.webp'; // Update with your logo path
+import logoWhite from '@/assets/logo-white.png'; // Update with your logo path
 
 const Footer = () => {
   return (
@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-1">
-            <Link to="/" className="flex items-center space-x-2 font-bold text-xl">
-              <img src={logoWhite} alt="Klima360 Logo" className="w-40 h-auto object-cover logo" />
+            <Link to="/" className="flex items-center space-x-2 font-bold text-xl mb-6">
+              <img src={logoWhite} alt="Klima360 Logo" className="w-20 h-auto object-cover logo" />
             </Link>
             <p className="text-white/80 leading-relaxed">
               Building climate resilience for the world's farmers, one community at a time.
