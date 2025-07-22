@@ -44,8 +44,8 @@ const TestimonialSection = () => {
             <Card key={index} className="bg-card border-border shadow-soft hover:shadow-warm transition-all duration-300">
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
-                  <Quote className="h-8 w-8 text-earth mr-3" />
-                  <div className="flex text-earth">
+                  <Quote className="h-8 w-8 text-primary mr-3" />
+                  <div className="flex text-primary">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-current" />
                     ))}
