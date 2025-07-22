@@ -5,9 +5,15 @@ import { ArrowRight, Users, Shield, Sprout } from "lucide-react";
 import heroImage from "@/assets/map.png";
 import farmerImage from "@/assets/hero-farming.png";
 
+const heroMetrics = [
+  { value: '50K+', label: 'Farmers Supported' },
+  { value: '12', label: 'Countries Active' },
+  { value: '85%', label: 'Resilience Increase' },
+];
+
 const HeroSection = () => {
   return (
-    <section className="min-h-screen relative overflow-hidden px-4 mt-14">
+    <section className="min-h-screen relative overflow-hidden px-4 md:mt-14">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -21,7 +27,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10  flex items-center justify-center min-h-screen">
         <div className="max-w-6xl mx-auto text-center h-full">
-          <div className="animate-fade-in ">
+          <div className="animate-fade-in mt-32 ">
             <div className="flex flex-col md:flex-row gap-8 items-center md:items-stretch min-h-96">
               {/* Main content (left) */}
               <div className="flex-1 w-full text-left flex flex-col justify-center h-full">
@@ -72,6 +78,16 @@ const HeroSection = () => {
                     <Link to="/join-partner">Partner With Us</Link>
                   </Button>
                 </div>
+
+                {/* Mobile-only metrics cards (no image, no progress bars) */}
+                <div className="mt-10 w-full flex flex-col gap-4 md:hidden">
+                  {heroMetrics.map((metric) => (
+                    <div key={metric.label} className="bg-primary/10 rounded-lg p-4 text-left shadow-sm">
+                      <div className="text-2xl font-bold text-primary">{metric.value}</div>
+                      <div className="text-sm text-primary/80">{metric.label}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
               {/* Image and cards (right) */}
               <div className="flex-1 w-full flex items-center justify-center">
@@ -87,7 +103,7 @@ const HeroSection = () => {
                     </div>
                   </div>
                   {/* Countries Active - bottom left */}
-                  <div className="absolute left-0 md:-left-20 bottom-16 z-20">
+                  <div className="hidden md:block absolute left-0 md:-left-20 bottom-16 z-20">
                     <div className="text-center bg-primary/30 backdrop-blur-md rounded-lg p-3 border border-white/30 shadow-lg">
                       <div className="bg-primary-foreground p-2 rounded-md">
                         <div className="text-lg font-bold text-primary mb-1">12</div>
@@ -97,7 +113,7 @@ const HeroSection = () => {
                     </div>
                   </div>
                   {/* Resilience Increase - right side, vertically centered */}
-                  <div className="absolute right-0 md:-right-24 top-1/2 -translate-y-1/2 z-20">
+                  <div className="hidden md:blockabsolute right-0 md:-right-24 top-1/2 -translate-y-1/2 z-20">
                     <div className="text-center bg-primary/30 backdrop-blur-md rounded-lg p-3 border border-white/30 shadow-lg">
                       <div className="bg-primary-foreground p-2 rounded-md">
                         <div className="text-lg font-bold text-primary mb-1">85%</div>
@@ -112,32 +128,8 @@ const HeroSection = () => {
                     alt="Hero Image"
                     // width={100}
                     // height={800}
-                    className="h-[500px] w-full object-cover rounded-2xl shadow-lg"
+                    className="hidden md:block h-[500px] w-full object-cover rounded-2xl shadow-lg"
                   />
-                  {/* Mobile: stack cards inside image */}
-                  <div className="flex flex-col gap-3 absolute inset-0 justify-end items-center z-20 md:hidden p-3">
-                    <div className="text-center bg-primary/30 backdrop-blur-md rounded-lg p-3 border border-white/30 shadow-lg w-full max-w-xs">
-                      <div className="bg-primary-foreground p-2 rounded-md">
-                        <div className="text-lg font-bold text-primary mb-1">50K+</div>
-                        <div className="text-primary/80 mb-2 text-xs">Farmers Supported</div>
-                        <Progress value={85} className="h-1.5 bg-slate-200" />
-                      </div>
-                    </div>
-                    <div className="text-center bg-primary/30 backdrop-blur-md rounded-lg p-3 border border-white/30 shadow-lg w-full max-w-xs">
-                      <div className="bg-primary-foreground p-2 rounded-md">
-                        <div className="text-lg font-bold text-primary mb-1">12</div>
-                        <div className="text-primary/80 mb-2 text-xs">Countries Active</div>
-                        <Progress value={60} className="h-1.5 bg-slate-200" />
-                      </div>
-                    </div>
-                    <div className="text-center bg-primary/30 backdrop-blur-md rounded-lg p-3 border border-white/30 shadow-lg w-full max-w-xs">
-                      <div className="bg-primary-foreground p-2 rounded-md">
-                        <div className="text-lg font-bold text-primary mb-1">85%</div>
-                        <div className="text-primary/80 mb-2 text-xs">Resilience Increase</div>
-                        <Progress value={85} className="h-1.5 bg-slate-200" />
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
