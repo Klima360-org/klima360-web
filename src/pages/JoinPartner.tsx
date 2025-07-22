@@ -349,10 +349,10 @@ const JoinPartner = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button type="submit" className="flex-1" size="lg">
+                  <Button type="submit" className="flex-1 w-full py-2" size="lg" >
                     Submit Partnership Inquiry
                   </Button>
-                  <Button variant="outline" className="flex-1" size="lg">
+                  <Button variant="outline" className="flex-1 w-full py-2" size="lg">
                     <Calendar className="mr-2 h-4 w-4" />
                     Schedule a Call
                   </Button>
