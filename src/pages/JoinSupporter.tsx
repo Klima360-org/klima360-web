@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -9,8 +9,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { Heart, Lightbulb, Users, Target, ArrowLeft, ExternalLink } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { useForm } from '@formspree/react';
 
 const JoinSupporter = () => {
+  const [state, handleSubmit] = useForm("xzzveaqn");
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -92,20 +94,24 @@ const JoinSupporter = () => {
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Thank You for Your Interest!",
-      description: "We appreciate your commitment to climate resilience. Our team will reach out within 2 business days to discuss how you can support our mission.",
-    });
-    setFormData({
-      name: '',
-      email: '',
-      organization: '',
-      supportType: '',
-      message: ''
-    });
-  };
+  useEffect(() => {
+    if(state.succeeded){
+      toast({
+        title: "Thank You for Your Interest!",
+        description: "We appreciate your commitment to climate resilience. Our team will reach out within 2 business days to discuss how you can support our mission.",
+      });
+      setFormData({
+        name: '',
+        email: '',
+        organization: '',
+        supportType: '',
+        message: ''
+      });
+     
+    }
+  }, [state.succeeded, toast, handleSubmit]);
+
+ 
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
