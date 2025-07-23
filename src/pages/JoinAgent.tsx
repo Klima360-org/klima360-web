@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -9,6 +9,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle, Users, BookOpen, Shield, Award, ArrowLeft } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { useForm, ValidationError } from '@formspree/react';
+
 
 const JoinAgent = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +21,7 @@ const JoinAgent = () => {
     experience: '',
     motivation: ''
   });
+  const [state, handleSubmit] = useForm("xblkgaap")
   const { toast } = useToast();
 
   const benefits = [
@@ -53,23 +56,24 @@ const JoinAgent = () => {
     "Provide ongoing support and mentorship to farmers"
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Application Submitted!",
-      description: "Thank you for your interest. We'll review your application and get back to you within 5 business days.",
-    });
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      location: '',
-      experience: '',
-      motivation: ''
-    });
-  };
-
+  useEffect(() => {
+    if (state.succeeded) {
+      toast({
+        title: "Application Submitted!",
+        description: "Thank you for your interest. We'll review your application and get back to you within 5 business days.",
+        variant: "default",
+      });
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        location: '',
+        experience: '',
+        motivation: ''
+      });
+    }
+  }, [state.succeeded, toast]);
+ 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
