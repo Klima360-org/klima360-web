@@ -1,23 +1,23 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Badge } from "@/components/ui/badge";
+import { useToast } from "@/hooks/use-toast";
+import { useForm } from "@formspree/react";
 import {
   Building,
-  Handshake,
-  Target,
-  Globe,
-  ArrowLeft,
   Calendar,
+  Globe,
+  Handshake,
+  Target
 } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { useEffect, useState } from "react";
 
 const JoinPartner = () => {
+  const [state, handleSubmit] = useForm("xyzpedaq");
   const [formData, setFormData] = useState({
     organization: "",
     contactName: "",
@@ -85,23 +85,26 @@ const JoinPartner = () => {
     "Brand association with proven climate resilience impact",
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Partnership Inquiry Submitted!",
-      description:
-        "Thank you for your interest. Our partnerships team will contact you within 3 business days to discuss opportunities.",
-    });
-    setFormData({
-      organization: "",
-      contactName: "",
-      email: "",
-      phone: "",
-      organizationType: "",
-      interest: "",
-      goals: "",
-    });
-  };
+  useEffect(() => {
+    if(state.succeeded) {
+      toast({
+        title: "Partnership Inquiry Submitted!",
+        description:
+          "Thank you for your interest. Our partnerships team will contact you within 3 business days to discuss opportunities.",
+        variant: "default",
+      });
+      setFormData({
+        organization: "",
+        contactName: "",
+        email: "",
+        phone: "",
+        organizationType: "",
+        interest: "",
+        goals: "",
+      });
+    }
+  }, [state.succeeded, toast, setFormData]);
+
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
