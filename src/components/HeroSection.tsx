@@ -27,7 +27,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10  flex items-center justify-center min-h-screen">
         <div className="max-w-6xl mx-auto text-center h-full">
-          <div className="animate-fade-in mt-32 ">
+          <div className="animate-fade-in mt-32 md:mt-0 ">
             <div className="flex flex-col md:flex-row gap-8 items-center md:items-stretch min-h-96">
               {/* Main content (left) */}
               <div className="flex-1 w-full text-left flex flex-col justify-center h-full">
