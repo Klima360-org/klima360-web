@@ -94,25 +94,37 @@ const JoinAgent = () => {
             Become a <span className="text-transparent bg-primary bg-clip-text">Climate Resilience Agent</span>
           </h1>
           
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
             Join our network of community champions who are transforming agriculture 
             through climate-smart practices and farmer empowerment.
           </p>
           
-          <Badge variant="outline" className="px-4 py-2  bg-green-500/10 text-green-700 border-green-200 shadow-sm backdrop-blur-sm animate-float">
-            Over 2,000 active agents worldwide
-          </Badge>
+          <div className="relative inline-block mt-4">
+            <Badge variant="outline" className="px-4 py-2 bg-green-500/10 text-green-700 border-green-200 shadow-sm backdrop-blur-sm animate-float">
+              Over 100,000 active agents worldwide
+            </Badge>
+            {/* Pulsing notification dot at top right, tooltip above dot */}
+            <div className="absolute -top-3 -right-1">
+              <span className="absolute -top-7 left-1/2 -translate-x-1/2 text-xs font-semibold text-yellow-700 bg-white bg-opacity-90 rounded px-2 py-0.5 mb-1 shadow border border-yellow-200 whitespace-nowrap z-10">
+                This is our global agent goal
+              </span>
+              <span className="flex h-4 w-4 relative" aria-label="Goal notification">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-4 w-4 bg-yellow-500 border-2 border-white"></span>
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* What is an Agent Section */}
-      <section className="py-16 px-4 bg-background">
+      <section className="py-8 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               What is a <span className='text-primary'>Klima360 Agent?</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Our agents are trained community leaders who bridge the gap between climate science 
               and practical farming solutions, bringing resilience directly to farming communities.
             </p>
@@ -155,7 +167,7 @@ const JoinAgent = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Ready to Make an Impact?
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg text-muted-foreground">
               Fill out the application below and join our mission to build climate resilience.
             </p>
           </div>
