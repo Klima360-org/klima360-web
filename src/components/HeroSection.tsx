@@ -72,7 +72,7 @@ const HeroSection = () => {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-primary text-primary hover:bg-primary/5"
+                    className="border-primary text-primary hover:bg-primary/5 hover:text-green-700"
                     asChild
                   >
                     <Link to="/join-partner">Partner With Us</Link>
