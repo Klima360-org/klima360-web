@@ -28,23 +28,9 @@ const HeroSection = () => {
       <div className="relative z-10  flex items-center justify-center min-h-screen">
         <div className="max-w-6xl mx-auto text-center h-full">
           <div className="animate-fade-in mt-32 md:mt-0 ">
-            <div className="flex flex-col md:flex-row gap-8 items-center md:items-stretch min-h-96">
+            <div className="flex flex-col md:flex-row gap-8 items-center justify-center md:items-stretch min-h-96">
               {/* Main content (left) */}
               <div className="flex-1 w-full text-left flex flex-col justify-center h-full">
-                <div className="flex justify-center mb-8">
-                  <div className="flex items-center space-x-4 text-primary">
-                    <Sprout className="h-8 w-8 animate-float" />
-                    <Shield
-                      className="h-8 w-8 animate-float"
-                      style={{ animationDelay: "0.5s" }}
-                    />
-                    <Users
-                      className="h-8 w-8 animate-float"
-                      style={{ animationDelay: "1s" }}
-                    />
-                  </div>
-                </div>
-
                 <h1 className="leading-[2] text-4xl md:text-6xl lg:text-5xl font-bold text-green-900 mb-6 text-left " style={{ lineHeight: "1.5" }}>
                   Resilience for Those Who {""}
                   <span className="text-primary">Feed the World</span>
