@@ -140,7 +140,7 @@ const JoinSupporter = () => {
           
           <div className="flex flex-wrap justify-center gap-4">
             <Badge variant="outline" className="px-4 py-2 bg-green-500/10 text-green-700 border-green-200 shadow-sm backdrop-blur-sm animate-pulse"  style={{ animationDelay: "1s" }}>
-              $2M+ Mobilized
+               Co-invest
             </Badge>
             <Badge variant="outline" className="px-4 py-2 bg-green-500/10 text-green-700 border-green-200 shadow-sm backdrop-blur-sm animate-pulse"  style={{ animationDelay: "2s" }}>
               50K+ Lives Impacted
