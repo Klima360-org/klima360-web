@@ -145,7 +145,7 @@ const JoinPartner = () => {
               variant="outline"
               className="px-4 py-2 bg-green-500/10 text-green-700 border-green-200 shadow-sm backdrop-blur-sm animate-pulse" style={{ animationDelay: "2s" }}
             >
-              12 Countries
+              5 Countries
             </Badge>
             <Badge
               variant="outline"
