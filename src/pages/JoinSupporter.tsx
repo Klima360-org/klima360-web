@@ -70,7 +70,7 @@ const JoinSupporter = () => {
     },
     {
       title: "Regional Expansion",
-      current: "12",
+      current: "5",
       target: "20",
       description: "Countries with active programs"
     }

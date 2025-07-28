@@ -7,7 +7,7 @@ import farmerImage from "@/assets/hero-farming.png";
 
 const heroMetrics = [
   { value: '50K+', label: 'Farmers Supported' },
-  { value: '12', label: 'Countries Active' },
+  { value: '5', label: 'Countries Active' },
   { value: '85%', label: 'Resilience Increase' },
 ];
 
@@ -106,7 +106,7 @@ const HeroSection = () => {
                   <div className="hidden md:block absolute left-0 md:-left-20 bottom-16 z-20">
                     <div className="text-center bg-primary/30 backdrop-blur-md rounded-lg p-3 border border-white/30 shadow-lg">
                       <div className="bg-primary-foreground p-2 rounded-md">
-                        <div className="text-lg font-bold text-primary mb-1">12</div>
+                        <div className="text-lg font-bold text-primary mb-1">5</div>
                         <div className="text-primary/80 mb-2 text-xs">Countries Active</div>
                         <Progress value={60} className="h-1.5 bg-slate-200" />
                       </div>
