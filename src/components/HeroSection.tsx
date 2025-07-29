@@ -28,7 +28,7 @@ const HeroSection = () => {
       <div className="relative z-10  flex items-center justify-center min-h-screen">
         <div className="max-w-6xl mx-auto text-center h-full">
           <div className="animate-fade-in mt-32 md:mt-0 ">
-            <div className="flex flex-col md:flex-row gap-8 items-center justify-center md:items-stretch min-h-96">
+            <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
               {/* Main content (left) */}
               <div className="flex-1 w-full text-left flex flex-col justify-center h-full">
                 <h1 className="leading-[2] text-4xl md:text-6xl lg:text-5xl font-bold text-green-900 mb-6 text-left " style={{ lineHeight: "1.5" }}>
@@ -37,7 +37,7 @@ const HeroSection = () => {
                 </h1>
 
                 <p className="text-lg md:text-lg text-zinc-500 mb-12 max-w-4xl mx-auto leading-loose text-left" style={{ lineHeight: "1.8" }}>
-                  Empowering smallholder farmers across Africa and Asia with
+                  Empowering smallholder farmers across Global South with
                   climate-smart tools, community networks, and financial
                   protection. Building resilient food systems, one farm at a
                   time.
