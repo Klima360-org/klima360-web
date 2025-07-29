@@ -143,7 +143,7 @@ const JoinAgent = () => {
               </ul>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <Card key={index} className="border-border shadow-soft">
                   <CardContent className="p-6">
