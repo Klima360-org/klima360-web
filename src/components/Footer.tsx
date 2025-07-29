@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Leaf, Mail, MapPin, Phone } from 'lucide-react';
+import { FacebookIcon, InstagramIcon, Leaf, LinkedinIcon, Mail, MapPin, Phone, TwitterIcon, X } from 'lucide-react';
 import logoWhite from '@/assets/logo-white.png'; // Update with your logo path
 
 const Footer = () => {
@@ -15,6 +15,20 @@ const Footer = () => {
             <p className="text-white/80 leading-relaxed">
               Building climate resilience for the world's farmers, one community at a time.
             </p>
+            <div>
+              <a href="https://www.facebook.com/Klima360" target="_blank" rel="noopener noreferrer" className="inline-block mt-4">
+                <FacebookIcon className="h-4 w-4 text-green-500 hover:text-white transition-colors" />
+              </a>
+              <a href="https://www.twitter.com/Klima360" target="_blank" rel="noopener noreferrer" className="inline-block ml-4">
+                <TwitterIcon className="h-4 w-4 text-green-500 hover:text-white transition-colors" />
+              </a>
+              <a href="https://www.instagram.com/Klima360.world" target="_blank" rel="noopener noreferrer" className="inline-block ml-4">
+                <InstagramIcon className="h-4 w-4 text-green-500 hover:text-white transition-colors" />
+              </a>
+              <a href="https://www.linkedin.com/company/klima360" target="_blank" rel="noopener noreferrer" className="inline-block ml-4">
+                <LinkedinIcon className="h-4 w-4 text-green-500 hover:text-white transition-colors" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
