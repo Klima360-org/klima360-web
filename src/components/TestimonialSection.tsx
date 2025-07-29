@@ -4,24 +4,24 @@ import { Quote, Star } from 'lucide-react';
 const TestimonialSection = () => {
   const testimonials = [
     {
-      name: "Amara Kone",
-      location: "Mali",
-      role: "Rice Farmer",
-      quote: "The early warning system helped me protect my crops from unexpected flooding. My harvest improved by 40% this season.",
+      name: "Peter Ndegwa",
+      location: "Nyandarua County, Kenya",
+      role: "Maize Farmer",
+      quote: "I used to blame bad luck when my crops failed. Now I understand how climate is shifting and how to adapt. That knowledge has changed how I farm.",
       rating: 5
     },
     {
-      name: "James Mwangi", 
-      location: "Kenya",
+      name: "Judith Achieng'", 
+      location: "Embu County, Kenya",
       role: "Coffee Farmer",
-      quote: "Through the community network, I learned drought-resistant techniques that saved my farm. Now I help other farmers too.",
+      quote: "The training opened my eyes to how climate shocks are getting worse. With better practices, I’ve reduced losses and feel more in control.",
       rating: 5
     },
     {
-      name: "Priya Sharma",
-      location: "Bangladesh",
-      role: "Vegetable Farmer",
-      quote: "The microinsurance gave me peace of mind. When the cyclone hit, I had support to replant and recover quickly.",
+      name: "Martin Wanyama",
+      location: "Bungoma County, Kenya",
+      role: "Groundnut Farmer",
+      quote: "We were never taught about climate resilience in school. But now, with access to updates and community support, we’re learning together and recovering faster",
       rating: 5
     }
   ];
@@ -44,15 +44,15 @@ const TestimonialSection = () => {
             <Card key={index} className="bg-card border-border shadow-soft hover:shadow-warm transition-all duration-300">
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
-                  <Quote className="h-8 w-8 text-primary mr-3" />
+                  <Quote className="h-6 w-8=6 text-primary mr-3" />
                   <div className="flex text-primary">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-current" />
+                      <Star key={i} className="h-3 w-3 fill-current" />
                     ))}
                   </div>
                 </div>
                 
-                <blockquote className="text-muted-foreground mb-6 leading-relaxed italic">
+                <blockquote className="text-muted-foreground mb-6 leading-relaxed italic text-sm">
                   "{testimonial.quote}"
                 </blockquote>
                 
