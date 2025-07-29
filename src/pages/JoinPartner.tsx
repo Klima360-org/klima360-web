@@ -77,7 +77,7 @@ const JoinPartner = () => {
   ];
 
   const partnershipBenefits = [
-    "Access to our network of 50,000+ farmers across 12 countries",
+    "Access to our network of 50,000+ farmers across 5 countries",
     "Co-creation opportunities for innovative climate solutions",
     "Shared impact measurement and reporting frameworks",
     "Joint funding opportunities and grant applications",
