@@ -28,7 +28,7 @@ const AboutSection = () => {
       id: "global-impact",
       title: "Global Impact",
       icon: Globe,
-      content: `Operating across Africa and Asia, we partner with local communities to ensure our solutions are culturally appropriate. Every intervention is designed with farmers to create lasting, scalable change from the ground up.`,
+      content: `Operating across Global South, we partner with local communities to ensure our solutions are culturally appropriate. Every intervention is designed with farmers to create lasting, scalable change from the ground up.`,
     },
   ];
 
