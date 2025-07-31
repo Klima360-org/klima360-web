@@ -1,6 +1,6 @@
 # Klima360 Resilience Web
 
-This is the official web application for Klima360 Resilience, a platform dedicated to empowering smallholder farmers across Global South with climate-smart tools, community networks, and financial protection. Our mission is to build resilient food systems, one farm at a time.
+This is the official web application for Klima360 Resilience, a platform dedicated to empowering smallholder farmers across the Global South with climate-smart tools, community networks, and financial protection. Our mission is to build resilient food systems, one farm at a time.
 
 This project is built with a modern, scalable, and type-safe stack, featuring Vite, React, TypeScript, and Shadcn/UI for a beautiful and performant user experience.
 
