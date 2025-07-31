@@ -37,7 +37,7 @@ const HeroSection = () => {
                 </h1>
 
                 <p className="text-lg md:text-lg text-zinc-500 mb-12 max-w-4xl mx-auto leading-loose text-left" style={{ lineHeight: "1.8" }}>
-                  Empowering smallholder farmers across Global South with
+                  Empowering smallholder farmers across the Global South with
                   climate-smart tools, community networks, and financial
                   protection. Building resilient food systems, one farm at a
                   time.
