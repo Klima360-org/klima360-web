@@ -19,7 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'manrope': ['Manrope', 'sans-serif'],
+				'manrope': ['Jost', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
